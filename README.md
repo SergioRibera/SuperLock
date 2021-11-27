@@ -5,7 +5,7 @@ Is a the fast and furius lock screen web based. Based on tauri and Rust this is 
 To make a custom theme, you can use any framewrok web or vanilla.
 You can use the Tauri Api to comunicate or access the some functions, windows and the most important, the listener of the events
 
-#TODO
+# TODO
 - [ ] Documentation
 - [ ] Export Api for developers
 - [ ] Configuration screen
