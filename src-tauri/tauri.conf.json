@@ -24,7 +24,7 @@
             "resources": [],
             "externalBin": [],
             "copyright": "",
-            "category": "Customization",
+            "category": "Developer Tool",
             "shortDescription": "",
             "longDescription": ""
         },
@@ -40,7 +40,11 @@
                 "resizable": false,
                 "fullscreen": true,
                 "decorations": false,
-                "allwaysOnTop": true
+                "alwaysOnTop": true,
+                "skipTaskbar": true,
+                "maximized": true,
+                "focus": true,
+                "center": true
             }
         ],
         "security": {
