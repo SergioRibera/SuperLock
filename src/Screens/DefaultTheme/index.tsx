@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { listen as tauriListen } from '@tauri-apps/api/event';
 import './style.css';
 
 type DefaultThemeProps = {
@@ -46,6 +47,11 @@ const SimpleClock = (options: DefaultThemeProps) => {
 const ProfileUnlock = () => {
     const [profileSrc, setProfileSrc] = useState("https://i.imgur.com/7yUvePI.png");
     const [profileName, setProfileName] = useState("Sergio Ribera");
+
+    useEffect(() => {
+        tauriListen("superlock://profile-image", (payload) => setProfileSrc(payload.payload as string));
+        tauriListen("superlock://profile-name", (payload) => setProfileName(payload.payload as string));
+    }, [profileSrc, profileName]);
 
     return (
         <section className="content">
